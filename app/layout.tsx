@@ -17,6 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Atlas Unite - Esteja Presente",
   description: "Atlas Unite é o radar social que aproxima você de pessoas, eventos e comunidades que existem ao seu redor.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

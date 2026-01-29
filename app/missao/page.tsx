@@ -73,8 +73,8 @@ export default function MissaoPage() {
       {/* Navigation */}
       <PageNavigation
         prev={{
-          href: "/comunidades",
-          label: "Comunidades",
+          href: "/eventos",
+          label: "Eventos",
         }}
         next={{
           href: "/socios",

@@ -10,19 +10,25 @@ import { motion } from "framer-motion";
 export default function SociosPage() {
   const founders = [
     {
-      name: "Nome do Sócio 1",
-      role: "Co-Founder & CEO",
+      name: "Munir",
+      role: "Co-Founder",
       bio: "Acredita que a tecnologia deve nos aproximar, não nos isolar. Construindo o Atlas Unite para criar encontros reais.",
+      icon: "sparkles" as const,
+      linkedin: "https://www.linkedin.com/in/munir",
     },
     {
-      name: "Nome do Sócio 2",
-      role: "Co-Founder & CTO",
-      bio: "Visionário em tecnologia geolocalizada. Transformando conexões digitais em experiências físicas.",
+      name: "Pedro Mascarenhas",
+      role: "Co-Founder",
+      bio: "Visionário em criar conexões significativas. Transformando ideias em experiências que unem pessoas no mundo físico.",
+      icon: "bulb" as const,
+      linkedin: "https://www.linkedin.com/in/pedromascarenhas",
     },
     {
-      name: "Nome do Sócio 3",
-      role: "Co-Founder & CXO",
-      bio: "Apixonada por experiências humanas autênticas. Criando comunidades que realmente importam.",
+      name: "João Lucas",
+      role: "Co-Founder",
+      bio: "Desenvolvedor apaixonado por construir soluções que fazem a diferença. Transformando código em conexões humanas.",
+      icon: "code" as const,
+      linkedin: "https://www.linkedin.com/in/joaolucas",
     },
   ];
 
@@ -72,6 +78,8 @@ export default function SociosPage() {
                   name={founder.name}
                   role={founder.role}
                   bio={founder.bio}
+                  icon={founder.icon}
+                  linkedin={founder.linkedin}
                 />
               </motion.div>
             ))}

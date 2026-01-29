@@ -26,6 +26,7 @@ export function Navbar() {
     { name: "Como funciona", href: "/como-funciona" },
     { name: "Planos", href: "/planos" },
     { name: "Comunidades", href: "/comunidades" },
+    { name: "Eventos", href: "/eventos" },
     { name: "Missão", href: "/missao" },
     { name: "Sócios", href: "/socios" },
     { name: "Contato", href: "/contato" },

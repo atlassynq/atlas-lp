@@ -119,8 +119,8 @@ export default function ComunidadesPage() {
           label: "Planos",
         }}
         next={{
-          href: "/missao",
-          label: "Nossa Missão",
+          href: "/eventos",
+          label: "Eventos",
         }}
       />
     </main>

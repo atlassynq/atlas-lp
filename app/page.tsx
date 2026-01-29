@@ -3,7 +3,7 @@
 import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
 import Link from "next/link";
-import { ArrowRight, Users, Calendar, MapPin, Heart, Sparkles, Shield } from "lucide-react";
+import { ArrowRight, Users, Calendar, MapPin, Heart, Sparkles, Shield, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -33,8 +33,8 @@ export default function Home() {
       bgGradient: "from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20",
     },
     {
-      title: "Comunidades & Eventos",
-      description: "Explore grupos locais e eventos acontecendo agora.",
+      title: "Comunidades",
+      description: "Explore grupos locais e faça novas conexões.",
       href: "/comunidades",
       icon: Calendar,
       gradient: "from-orange-600 to-red-600",
@@ -63,7 +63,7 @@ export default function Home() {
       <Hero />
 
       {/* Section Overview */}
-      <Section id="explore" className="bg-gray-50/50 dark:bg-gray-950/50">
+      <Section id="explore">
         <div className="max-w-7xl mx-auto space-y-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -118,20 +118,54 @@ export default function Home() {
             ))}
           </div>
 
-          {/* CTA */}
+          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center pt-8"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8"
           >
             <Link
               href="/contato"
-              className="inline-flex items-center gap-2 px-10 py-5 text-base font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/20 hover:shadow-xl hover:shadow-[#FF6B35]/30 transition-all transform hover:-translate-y-0.5"
+              className="group relative p-8 rounded-2xl bg-gradient-to-br from-[#FFE8DC] to-[#FFE8DC] dark:from-[#FF6B35]/10 dark:to-[#FF8B5A]/10 border border-gray-200 dark:border-gray-800 hover:border-[#FF6B35] dark:hover:border-[#FF8B5A] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
-              Entre em contato
-              <ArrowRight className="h-4 w-4" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF6B35] to-[#FF8B5A] flex items-center justify-center shadow-lg shadow-[#FF6B35]/20">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Entre em Contato
+                </h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Tem dúvidas ou quer saber mais? Fale com a gente!
+              </p>
+              <div className="flex items-center text-sm font-medium text-[#FF6B35] dark:text-[#FF8B5A] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                Conversar
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
+            </Link>
+
+            <Link
+              href="/eventos"
+              className="group relative p-8 rounded-2xl bg-gradient-to-br from-[#FFE8DC] to-[#FFE8DC] dark:from-[#FF6B35]/10 dark:to-[#FF8B5A]/10 border border-gray-200 dark:border-gray-800 hover:border-[#FF6B35] dark:hover:border-[#FF8B5A] transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF6B35] to-[#FF8B5A] flex items-center justify-center shadow-lg shadow-[#FF6B35]/20">
+                  <Calendar className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Crie seu Evento
+                </h3>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Leve seu evento para o mapa social do Atlas.
+              </p>
+              <div className="flex items-center text-sm font-medium text-[#FF6B35] dark:text-[#FF8B5A] opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
+                Saiba mais
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </div>
             </Link>
           </motion.div>
         </div>
