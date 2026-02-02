@@ -53,7 +53,7 @@ export default function Home() {
 
   const founders = [
     {
-      name: "Munir",
+      name: "Munir Poeys",
       role: "Co-Founder",
       bio: "Acredita que a tecnologia deve nos aproximar, não nos isolar. Construindo o Atlas Unite para criar encontros reais.",
       icon: "sparkles" as const,
