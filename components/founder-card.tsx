@@ -10,6 +10,7 @@ interface FounderCardProps {
   linkedin?: string;
   photo?: string;
   icon?: "code" | "bulb" | "sparkles";
+  href: string;
   className?: string;
 }
 
@@ -20,6 +21,7 @@ export function FounderCard({
   linkedin,
   photo,
   icon,
+  href,
   className,
 }: FounderCardProps) {
   const initials = name
@@ -83,17 +85,13 @@ export function FounderCard({
           </p>
 
           {/* CTA Button - Hidden by default, shows on hover */}
-          {linkedin && (
-            <Link
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="opacity-0 group-hover:opacity-100 inline-flex items-center gap-2 px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/30 hover:shadow-xl hover:shadow-[#FF6B35]/40 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"
-            >
-              Me conheça
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          )}
+          <Link
+            href={href}
+            className="opacity-0 group-hover:opacity-100 inline-flex items-center gap-2 px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/30 hover:shadow-xl hover:shadow-[#FF6B35]/40 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"
+          >
+            Me conheça
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </div>

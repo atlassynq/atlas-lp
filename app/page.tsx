@@ -57,23 +57,24 @@ export default function Home() {
       role: "Co-Founder",
       bio: "Acredita que a tecnologia deve nos aproximar, não nos isolar. Construindo o Atlas Unite para criar encontros reais.",
       icon: "sparkles" as const,
-      linkedin: "https://www.linkedin.com/in/munir",
       photo: "/founders/munir.jpeg",
+      href: "/munirpoeys",
     },
     {
       name: "Pedro Mascarenhas",
       role: "Co-Founder",
       bio: "Visionário em criar conexões significativas. Transformando ideias em experiências que unem pessoas no mundo físico.",
       icon: "bulb" as const,
-      linkedin: "https://www.linkedin.com/in/pedromascarenhas",
+      href: "/pedromascarenhas",
     },
     {
       name: "João Lucas",
       role: "Co-Founder",
       bio: "Desenvolvedor apaixonado por construir soluções que fazem a diferença. Transformando código em conexões humanas.",
       icon: "code" as const,
-      linkedin: "https://www.linkedin.com/in/joaolucas",
+      linkedin: "https://www.linkedin.com/in/joaolucascordeiro/",
       photo: "/founders/joaolucas.png",
+      href: "/joaolucas",
     },
   ];
 
@@ -121,6 +122,7 @@ export default function Home() {
                   icon={founder.icon}
                   linkedin={founder.linkedin}
                   photo={founder.photo}
+                  href={founder.href}
                 />
               </motion.div>
             ))}
