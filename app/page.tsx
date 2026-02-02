@@ -2,6 +2,7 @@
 
 import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
+import { FounderCard } from "@/components/founder-card";
 import Link from "next/link";
 import { ArrowRight, Users, Calendar, MapPin, Heart, Sparkles, Shield, Mail } from "lucide-react";
 import { motion } from "framer-motion";
@@ -48,19 +49,84 @@ export default function Home() {
       gradient: "from-indigo-600 to-violet-600",
       bgGradient: "from-indigo-50 to-violet-50 dark:from-indigo-950/20 dark:to-violet-950/20",
     },
+  ];
+
+  const founders = [
     {
-      title: "Conheça os Sócios",
-      description: "As pessoas por trás da visão do Atlas Unite.",
-      href: "/socios",
-      icon: Users,
-      gradient: "from-teal-600 to-cyan-600",
-      bgGradient: "from-teal-50 to-cyan-50 dark:from-teal-950/20 dark:to-cyan-950/20",
+      name: "Munir",
+      role: "Co-Founder",
+      bio: "Acredita que a tecnologia deve nos aproximar, não nos isolar. Construindo o Atlas Unite para criar encontros reais.",
+      icon: "sparkles" as const,
+      linkedin: "https://www.linkedin.com/in/munir",
+      photo: "/founders/munir.jpeg",
+    },
+    {
+      name: "Pedro Mascarenhas",
+      role: "Co-Founder",
+      bio: "Visionário em criar conexões significativas. Transformando ideias em experiências que unem pessoas no mundo físico.",
+      icon: "bulb" as const,
+      linkedin: "https://www.linkedin.com/in/pedromascarenhas",
+    },
+    {
+      name: "João Lucas",
+      role: "Co-Founder",
+      bio: "Desenvolvedor apaixonado por construir soluções que fazem a diferença. Transformando código em conexões humanas.",
+      icon: "code" as const,
+      linkedin: "https://www.linkedin.com/in/joaolucas",
+      photo: "/founders/joaolucas.png",
     },
   ];
 
   return (
     <main className="min-h-screen bg-white dark:bg-black">
       <Hero />
+
+      {/* Fundadores Section */}
+      <Section>
+        <div className="max-w-6xl mx-auto space-y-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-4"
+          >
+            <div className="inline-block px-4 py-2 bg-[#FFE8DC] dark:bg-[#FF6B35]/10 text-[#FF6B35] dark:text-[#FF8B5A] rounded-full text-sm font-medium mb-4">
+              Equipe
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              Conheça os{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] dark:from-[#FF6B35] dark:to-[#FF8B5A]">
+                Fundadores
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              As pessoas por trás da visão de reconectar o mundo físico.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {founders.map((founder, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <FounderCard
+                  name={founder.name}
+                  role={founder.role}
+                  bio={founder.bio}
+                  icon={founder.icon}
+                  linkedin={founder.linkedin}
+                  photo={founder.photo}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       {/* Section Overview */}
       <Section id="explore">

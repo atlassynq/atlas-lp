@@ -77,8 +77,8 @@ export default function MissaoPage() {
           label: "Eventos",
         }}
         next={{
-          href: "/socios",
-          label: "Sócios",
+          href: "/contato",
+          label: "Contato",
         }}
       />
     </main>

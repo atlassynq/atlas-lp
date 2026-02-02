@@ -28,7 +28,6 @@ export function Navbar() {
     { name: "Comunidades", href: "/comunidades" },
     { name: "Eventos", href: "/eventos" },
     { name: "Missão", href: "/missao" },
-    { name: "Sócios", href: "/socios" },
     { name: "Contato", href: "/contato" },
   ];
 

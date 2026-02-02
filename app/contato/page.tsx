@@ -80,8 +80,8 @@ export default function ContatoPage() {
       {/* Navigation */}
       <PageNavigation
         prev={{
-          href: "/socios",
-          label: "Sócios",
+          href: "/missao",
+          label: "Nossa Missão",
         }}
       />
     </main>
