@@ -69,10 +69,13 @@ export default function JoaoLucasPage() {
                   Sobre
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Como desenvolvedor do Atlas Unite, João acredita que a tecnologia deve ser uma ponte para conexões reais, não uma barreira. Seu foco é criar experiências digitais que incentivem as pessoas a se encontrarem pessoalmente.
+                  Me chamo João Lucas, sou desenvolvedor e vejo tecnologia como a melhor forma de transformar ideias em algo que realmente impacta a vida das pessoas. Gosto de encarar cada projeto como um desafio intelectual e criativo, unindo lógica, design e empatia para construir soluções que façam sentido no dia a dia de quem usa.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Com experiência em desenvolvimento full-stack, ele trabalha para garantir que a plataforma seja intuitiva, rápida e capaz de facilitar encontros significativos no mundo físico.
+                  Minha base vem de valores simples: disciplina, consistência e vontade de melhorar um pouco todos os dias. O basquete e referências como Michael Jordan reforçaram em mim essa mentalidade focada em evolução constante, enquanto a música e artistas como o Mike Shinoda influenciaram meu processo criativo, ajudando a experimentar, iterar e não ter medo de refazer até chegar na melhor versão da ideia.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Gosto de estudar, testar possibilidades e, nas horas vagas, mergulhar em filmes que me inspiram a contar histórias melhores também no mundo digital. No fundo, minha carreira é guiada por aprender, construir e ter coragem de atravessar as divisões que surgem no caminho. "So give me reason to prove me wrong, to wash this memory clean, let the floods cross the distance in your eyes, across this new divide."
                 </p>
               </motion.div>
 

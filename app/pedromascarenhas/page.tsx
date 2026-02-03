@@ -52,7 +52,7 @@ export default function PedroMascarenhasPage() {
                   Pedro Mascarenhas
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Visionário em criar conexões significativas. Transformando ideias em experiências que unem pessoas no mundo físico.
+                  Empreendedor com mentalidade global, apaixonado por comunicação, história e pessoas.
                 </p>
               </motion.div>
 
@@ -66,10 +66,16 @@ export default function PedroMascarenhasPage() {
                   Sobre
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Pedro é um estrategista que transforma conceitos abstratos em experiências tangíveis. Sua visão única permite criar pontes entre o digital e o físico, sempre focado no impacto real na vida das pessoas.
+                  Empreendedor com mentalidade global, sou apaixonado por comunicação, história e pessoas, com referências que vão de Jesus aos Beatles e Walt Disney. Gosto de observar como conexões moldam culturas, negócios e o mundo real.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Como co-founder do Atlas Unite, ele dedicado a garantir que cada interação na plataforma resulte em conexões autênticas e encontros significativos offline.
+                  O Atlas nasce dessa visão: um radar social criado para transformar encontros presenciais em conexões reais, simples e naturais.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Como cofundador, atuo na visão do produto, estratégia e crescimento do Atlas, sempre com foco em experiência, inovação e conexão entre pessoas.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed italic">
+                  "Verás que um filho teu não foge à luta."
                 </p>
               </motion.div>
 

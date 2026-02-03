@@ -69,10 +69,19 @@ export default function MunirPoeysPage() {
                   Sobre
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Munir é um visionário que enxerga além das conexões digitais superficiais. Para ele, o verdadeiro valor da tecnologia está em sua capacidade de facilitar encontros autênticos e significativos no mundo real.
+                  Empreendedor desde criança, sempre fui movido por negociações, estratégia e pela construção de oportunidades. Desde cedo, enxergava valor onde outros viam apenas situações comuns — transformando ideias em iniciativas e conversas em possibilidades reais.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Como co-founder do Atlas Unite, ele lidera a missão de reconectar pessoas através de experiências presenciais, acreditando que cada conexão real conta.
+                  Tenho interesse genuíno por pessoas e pela capacidade de transformar boas conexões em acordos inteligentes. Acredito que grandes projetos nascem de relações sólidas e de uma visão clara de longo prazo.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Meu foco está em empreendedorismo e inovação, buscando constantemente criar, estruturar e evoluir projetos com mentalidade estratégica e ambição sustentável.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  No Atlas, carrego um propósito claro: transmitir conexão, visão estratégica e crescimento por meio de relacionamentos reais.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Influenciado por princípios como os de Dale Carnegie, acredito que influência verdadeira nasce do interesse genuíno pelas pessoas. Para mim, construir um projeto é, acima de tudo, construir relações, visão de futuro e impacto consistente.
                 </p>
               </motion.div>
 
