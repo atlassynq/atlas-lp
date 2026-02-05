@@ -2,12 +2,10 @@
 
 import { Section } from "@/components/section";
 import Link from "next/link";
-import { ArrowLeft, Lightbulb, Mail } from "lucide-react";
+import { ArrowLeft, Lightbulb, Mail, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function PedroMascarenhasPage() {
-  const initials = "PM";
-
   return (
     <main className="min-h-screen bg-white dark:bg-black">
       {/* Header */}
@@ -27,11 +25,14 @@ export default function PedroMascarenhasPage() {
             transition={{ duration: 0.8 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
-            {/* Photo/Initials Section */}
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-[#FF6B35] to-[#FF8B5A] flex items-center justify-center">
-              <span className="text-9xl font-bold text-white">
-                {initials}
-              </span>
+            {/* Photo Section */}
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+              <img
+                src="/founders/pedro.jpeg"
+                alt="Pedro Mascarenhas"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "center 10%" }}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             </div>
 
@@ -86,11 +87,13 @@ export default function PedroMascarenhasPage() {
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
                 <Link
-                  href="/contato"
+                  href="https://www.linkedin.com/in/pedro-mascarenhas-80601933b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/20 hover:shadow-xl hover:shadow-[#FF6B35]/30 transition-all"
                 >
-                  <Mail className="w-4 h-4" />
-                  Entre em contato
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
                 </Link>
               </motion.div>
             </div>

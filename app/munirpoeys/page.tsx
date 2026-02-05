@@ -2,7 +2,7 @@
 
 import { Section } from "@/components/section";
 import Link from "next/link";
-import { ArrowLeft, Sparkles, Mail } from "lucide-react";
+import { ArrowLeft, Sparkles, Mail, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -92,11 +92,13 @@ export default function MunirPoeysPage() {
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
                 <Link
-                  href="/contato"
+                  href="https://www.linkedin.com/in/munir-antun-p-702b90333/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/20 hover:shadow-xl hover:shadow-[#FF6B35]/30 transition-all"
                 >
-                  <Mail className="w-4 h-4" />
-                  Entre em contato
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
                 </Link>
               </motion.div>
             </div>

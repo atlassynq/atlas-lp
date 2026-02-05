@@ -47,6 +47,7 @@ export function FounderCard({
           alt={name}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-700"
+          style={{ objectPosition: "center 10%" }}
           sizes="400px"
         />
       ) : (

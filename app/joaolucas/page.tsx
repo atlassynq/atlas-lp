@@ -29,7 +29,7 @@ export default function JoaoLucasPage() {
             {/* Photo Section */}
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-900 dark:to-gray-800">
               <Image
-                src="/founders/joaolucas.png"
+                src="/founders/joaolucas.jpeg"
                 alt="João Lucas"
                 fill
                 className="object-cover"
@@ -89,17 +89,10 @@ export default function JoaoLucasPage() {
                   href="https://www.linkedin.com/in/joaolucascordeiro/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-white dark:bg-black border-2 border-gray-200 dark:border-gray-800 hover:border-[#FF6B35] dark:hover:border-[#FF8B5A] text-gray-900 dark:text-white rounded-full transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/20 hover:shadow-xl hover:shadow-[#FF6B35]/30 transition-all"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
-                </Link>
-                <Link
-                  href="/contato"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] hover:from-[#FF8B5A] hover:to-[#FF6B35] text-white rounded-full shadow-lg shadow-[#FF6B35]/20 hover:shadow-xl hover:shadow-[#FF6B35]/30 transition-all"
-                >
-                  <Mail className="w-4 h-4" />
-                  Entre em contato
                 </Link>
               </motion.div>
             </div>

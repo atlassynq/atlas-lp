@@ -65,6 +65,7 @@ export default function Home() {
       role: "Co-Founder",
       bio: "Visionário em criar conexões significativas. Transformando ideias em experiências que unem pessoas no mundo físico.",
       icon: "bulb" as const,
+      photo: "/founders/pedro.jpeg",
       href: "/pedromascarenhas",
     },
     {
@@ -73,7 +74,7 @@ export default function Home() {
       bio: "Desenvolvedor apaixonado por construir soluções que fazem a diferença. Transformando código em conexões humanas.",
       icon: "code" as const,
       linkedin: "https://www.linkedin.com/in/joaolucascordeiro/",
-      photo: "/founders/joaolucas.png",
+      photo: "/founders/joaolucas.jpeg",
       href: "/joaolucas",
     },
   ];
