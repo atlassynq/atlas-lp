@@ -64,6 +64,14 @@ export function Footer() {
                   Contato
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/termos-de-uso"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#FF6B35] dark:hover:text-[#FF8B5A] transition-colors"
+                >
+                  Termos de Uso
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -90,6 +98,14 @@ export function Footer() {
           <p className="text-sm text-gray-600 dark:text-gray-400">
             © {currentYear} Atlas Unite. Todos os direitos reservados.
           </p>
+          <div className="flex gap-6">
+            <Link
+              href="/termos-de-uso"
+              className="text-sm text-gray-600 dark:text-gray-400 hover:text-[#FF6B35] dark:hover:text-[#FF8B5A] transition-colors"
+            >
+              Termos de Uso
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

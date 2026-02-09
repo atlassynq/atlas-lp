@@ -29,6 +29,7 @@ export function Navbar() {
     { name: "Eventos", href: "/eventos" },
     { name: "Missão", href: "/missao" },
     { name: "Contato", href: "/contato" },
+    { name: "Termos de Uso", href: "/termos-de-uso" },
   ];
 
   return (

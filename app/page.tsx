@@ -4,7 +4,7 @@ import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
 import { FounderCard } from "@/components/founder-card";
 import Link from "next/link";
-import { ArrowRight, Users, Calendar, MapPin, Heart, Sparkles, Shield, Mail } from "lucide-react";
+import { ArrowRight, Users, Calendar, MapPin, Heart, Sparkles, Shield, Mail, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -48,6 +48,14 @@ export default function Home() {
       icon: Heart,
       gradient: "from-indigo-600 to-violet-600",
       bgGradient: "from-indigo-50 to-violet-50 dark:from-indigo-950/20 dark:to-violet-950/20",
+    },
+    {
+      title: "Termos de Uso",
+      description: "Conheça as regras e diretrizes da nossa plataforma.",
+      href: "/termos-de-uso",
+      icon: FileText,
+      gradient: "from-gray-600 to-gray-700",
+      bgGradient: "from-gray-50 to-gray-100 dark:from-gray-950/20 dark:to-gray-900/20",
     },
   ];
 
