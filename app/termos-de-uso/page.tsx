@@ -255,6 +255,19 @@ export default function TermosDeUsoPage() {
         "• Autoriza a coleta e uso de seus dados conforme descrito",
       ],
     },
+    {
+      id: "responsavel-legal",
+      icon: Shield,
+      title: "16. Responsável Legal",
+      content: [
+        "Nos termos da legislação brasileira aplicável, designamos o seguinte responsável legal pelo Atlas Unite:",
+        "",
+        "Nome: Pedro Mascarenhas do Nascimento",
+        "CPF: 201.883.567-03",
+        "",
+        "O responsável legal pode ser contatado através do e-mail: primeatlas.comunic@gmail.com",
+      ],
+    },
   ];
 
   return (
