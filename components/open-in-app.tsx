@@ -12,23 +12,23 @@ export function OpenInApp({ appPath, label = "Abrir no app" }: { appPath: string
   };
 
   return (
-    <div className="flex flex-col gap-3 w-full max-w-sm">
+    <div className="flex w-full max-w-sm flex-col gap-3">
       <button
         onClick={openApp}
-        className="w-full rounded-2xl bg-[#6000e5] py-4 font-semibold text-white transition hover:opacity-90"
+        className="w-full rounded-2xl bg-gradient-to-r from-[#FF6B35] to-[#FF8B5A] py-4 font-semibold text-white shadow-lg shadow-[#FF6B35]/25 transition hover:opacity-90 active:scale-[0.98]"
       >
         {label}
       </button>
       <div className="flex gap-3">
         <a
           href={APP_STORE_URL}
-          className="flex-1 rounded-2xl border border-white/15 py-3 text-center text-sm text-white/80 transition hover:bg-white/5"
+          className="flex-1 rounded-2xl border border-white/15 py-3 text-center text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5"
         >
           App Store
         </a>
         <a
           href={PLAY_STORE_URL}
-          className="flex-1 rounded-2xl border border-white/15 py-3 text-center text-sm text-white/80 transition hover:bg-white/5"
+          className="flex-1 rounded-2xl border border-white/15 py-3 text-center text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5"
         >
           Google Play
         </a>
