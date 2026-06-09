@@ -3,7 +3,7 @@ import type { PublicCommunity } from "@/lib/community";
 
 type Props = {
   community: PublicCommunity | null;
-  /** Texto do chip acima do nome (ex.: "VOCÊ FOI CONVIDADO"). Omitido se vazio. */
+  /** Texto do rótulo acima do nome (ex.: "Você foi convidado"). Omitido se vazio. */
   badge?: string;
   /** Caminho aberto no app via deep link (ex.: community/invite/<token>). */
   appPath: string;
@@ -24,70 +24,61 @@ export function CommunityHero({
   const isClosed = community?.type === "CLOSED";
 
   return (
-    <main className="flex min-h-[80vh] items-center justify-center px-6 py-16">
-      <div className="w-full max-w-md overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/40">
-        {/* Hero com a capa da comunidade (ou gradiente laranja de fallback) */}
-        <div className="relative h-40 w-full">
+    <main className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6 py-20">
+      {/* Glow ambiente derivado da capa — profundidade sutil, sem poluir */}
+      {cover ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={cover}
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-1/3 -z-10 size-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full object-cover opacity-20 blur-[120px]"
+        />
+      ) : (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-1/3 -z-10 size-[460px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF6B35] opacity-15 blur-[120px]"
+        />
+      )}
+
+      <div className="flex w-full max-w-sm flex-col items-center text-center">
+        {/* Avatar — limpo, sem faixa por cima */}
+        <div className="size-24 overflow-hidden rounded-[28px] bg-white/5 shadow-xl shadow-black/30 ring-1 ring-white/10">
           {cover ? (
-            <>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={cover}
-                alt=""
-                aria-hidden
-                className="h-full w-full scale-110 object-cover blur-sm"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-[#0a0a0a]" />
-            </>
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={cover} alt={community?.name ?? ""} className="h-full w-full object-cover" />
           ) : (
-            <div className="h-full w-full bg-gradient-to-br from-[#FF6B35] to-[#FF8B5A]" />
+            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#FF6B35] to-[#FF8B5A] text-3xl">
+              👥
+            </div>
           )}
         </div>
 
-        <div className="flex flex-col items-center px-6 pb-8 text-center">
-          {/* Avatar sobreposto ao hero */}
-          <div className="-mt-14 mb-5 h-28 w-28 overflow-hidden rounded-3xl bg-white/5 shadow-xl shadow-black/40 ring-4 ring-[#0a0a0a]">
-            {cover ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={cover} alt={community?.name ?? ""} className="h-full w-full object-cover" />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#FF6B35] to-[#FF8B5A] text-4xl">
-                👥
-              </div>
-            )}
-          </div>
+        {badge && (
+          <span className="mt-7 text-xs font-semibold uppercase tracking-[0.2em] text-[#FF8B5A]">
+            {badge}
+          </span>
+        )}
 
-          {badge && (
-            <span className="mb-3 rounded-full bg-[#FF6B35]/15 px-4 py-1.5 text-xs font-semibold tracking-wide text-[#FF8B5A]">
-              {badge}
-            </span>
-          )}
+        <h1 className="mt-3 text-3xl font-semibold tracking-tight text-balance text-white">
+          {community?.name || fallbackTitle}
+        </h1>
 
-          <h1 className="text-2xl font-bold text-white">
-            {community?.name || fallbackTitle}
-          </h1>
+        {memberCount !== undefined && (
+          <p className="mt-2 text-sm text-white/50">
+            {memberCount} {memberCount === 1 ? "membro" : "membros"}
+            {community?.type ? ` · ${isClosed ? "Privada" : "Aberta"}` : ""}
+          </p>
+        )}
 
-          {(memberCount !== undefined || community) && (
-            <p className="mt-1.5 text-sm text-white/60">
-              {memberCount !== undefined && (
-                <>
-                  {memberCount} {memberCount === 1 ? "membro" : "membros"}
-                  {community?.type ? " · " : ""}
-                </>
-              )}
-              {community?.type && (isClosed ? "Privada" : "Aberta")}
-            </p>
-          )}
+        {community?.description && (
+          <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-balance text-white/60">
+            {community.description}
+          </p>
+        )}
 
-          {community?.description && (
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
-              {community.description}
-            </p>
-          )}
-
-          <div className="mt-7 flex w-full justify-center">
-            <OpenInApp appPath={appPath} label={ctaLabel} />
-          </div>
+        <div className="mt-9 flex w-full justify-center">
+          <OpenInApp appPath={appPath} label={ctaLabel} />
         </div>
       </div>
     </main>

@@ -31,7 +31,7 @@ export default async function CommunityInvitePage({ params }: Params) {
   return (
     <CommunityHero
       community={community}
-      badge="VOCÊ FOI CONVIDADO"
+      badge="Você foi convidado"
       appPath={`community/invite/${token}`}
       ctaLabel="Aceitar convite no app"
     />
